@@ -1,0 +1,14 @@
+---
+Name: elemental-decisiontree-output-extension
+---
+DNADesign\SilverStripeElementalDecisionTree\Model\DecisionTreeAnswer:
+  extensions:
+    - Silverstripe\Elemental\DecisionTree\Output\DataExtension
+
+DNADesign\SilverStripeElementalDecisionTree\Model\DecisionTreeStep:
+  extensions:
+    - Silverstripe\Elemental\DecisionTree\Output\DataExtension
+
+DNADesign\SilverStripeElementalDecisionTree\Model\ElementDecisionTree:
+  extensions:
+    - Silverstripe\Elemental\DecisionTree\Output\BlockExtension

@@ -1,0 +1,55 @@
+{
+    "name": "silverstripe/silverstripe-elemental-decisiontree-output",
+    "description": "",
+    "type": "silverstripe-vendormodule",
+    "keywords": [
+        "silverstripe",
+        "element",
+        "elemental",
+        "decision tree",
+        "decision tree extension"
+    ],
+    "authors": [
+        {
+            "name": "SilverStripe",
+            "homepage": "http://silverstripe.com"
+        },
+        {
+            "name": "The SilverStripe Community",
+            "homepage": "http://silverstripe.org"
+        }
+    ],
+    "license": "BSD-3-Clause",
+    "require": {
+        "php": "^7.4 || ^8.0",
+        "ext-json": "*",
+        "silverstripe/vendor-plugin": "^1",
+        "dnadesign/silverstripe-elemental-decisiontree": "^2.0"
+    },
+    "require-dev": {
+        "silverstripe/recipe-testing": "^2",
+        "php-parallel-lint/php-parallel-lint": "^1.2",
+        "slevomat/coding-standard": "~6.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "SilverStripe\\Elemental\\": "src/",
+            "SilverStripe\\Elemental\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "php-lint": "parallel-lint src",
+        "phpcs": "phpcs src --standard=phpcs.xml --extensions=php --encoding=utf-8",
+        "phpcbf": "phpcbf src --standard=phpcs.xml --extensions=php --encoding=utf-8",
+        "test": "phpunit -d memory_limit=512M -d flush=1"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "extra": {
+        "project-files-installed": [
+            "behat.yml",
+            "phpcs.xml",
+            "phpunit.xml.dist"
+        ]
+    }
+}
