@@ -24,13 +24,13 @@ class BlockExtension extends Extension
     public function getJson(): string
     {
         try {
-            return json_encode(array_merge(
+            return base64_encode(json_encode(array_merge(
                 [
                     'blockTitle' => $this->getOwner()->Title,
                     'blockIntro' => ShortcodeParser::get()->parse($this->getOwner()->Introduction),
                 ],
                 $this->getTreeData()
-            ), JSON_THROW_ON_ERROR);
+            ), JSON_THROW_ON_ERROR));
         } catch (JsonException $e) {
             return '{}';
         }
