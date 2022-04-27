@@ -49,6 +49,7 @@
         "project-files-installed": [
             "behat.yml",
             "phpcs.xml",
+            "phpcs.xml.dist",
             "phpunit.xml.dist"
         ]
     }
