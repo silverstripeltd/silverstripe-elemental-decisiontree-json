@@ -1,11 +1,11 @@
 <?php
 
-namespace SilverStripe\Elemental\Tests;
+namespace Silverstripe\Elemental\Tests;
 
 use DNADesign\SilverStripeElementalDecisionTree\Model\DecisionTreeStep;
+use SilverStripe\Dev\SapphireTest;
 use SilverStripe\ORM\ArrayList;
 use SilverStripe\ORM\SS_List;
-use SilverStripe\Dev\SapphireTest;
 use SilverStripe\View\ArrayData;
 
 class DataExtensionTest extends SapphireTest
@@ -20,6 +20,7 @@ class DataExtensionTest extends SapphireTest
                 if (is_null($this->answers)) {
                     $this->answers = ArrayList::create();
                 }
+
                 return $this->answers;
             }
 
@@ -32,7 +33,7 @@ class DataExtensionTest extends SapphireTest
             'Title' => 'Step',
             'Type' => 'Question',
             'Content' => 'Content',
-            'HideTitle' => false
+            'HideTitle' => false,
         ]);
         $step->answers = ArrayList::create([
             ArrayData::create([

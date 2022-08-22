@@ -38,9 +38,9 @@
         }
     },
     "scripts": {
-        "php-lint": "parallel-lint src",
-        "phpcs": "phpcs src --standard=phpcs.xml --extensions=php --encoding=utf-8",
-        "phpcbf": "phpcbf src --standard=phpcs.xml --extensions=php --encoding=utf-8",
+        "php-lint": "parallel-lint src tests",
+        "phpcs": "phpcs src tests --standard=phpcs.xml --extensions=php --encoding=utf-8",
+        "phpcbf": "phpcbf src tests --standard=phpcs.xml --extensions=php --encoding=utf-8",
         "test": "phpunit -d memory_limit=512M -d flush=1"
     },
     "minimum-stability": "dev",
