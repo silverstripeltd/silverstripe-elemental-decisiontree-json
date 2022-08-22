@@ -52,5 +52,11 @@
             "phpcs.xml.dist",
             "phpunit.xml.dist"
         ]
+    },
+    "config": {
+        "allow-plugins": {
+            "composer/installers": true,
+            "dealerdirect/phpcodesniffer-composer-installer": true
+        }
     }
 }
