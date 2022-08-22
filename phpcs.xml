@@ -5,6 +5,11 @@
     <file>src</file>
     <file>tests</file>
 
+    <!-- Show progress and output sniff names on violation, and add colours -->
+    <arg value="p" />
+    <arg name="colors" />
+    <arg value="s" />
+
     <rule ref="PSR2">
         <!-- Allow non camel cased method names - some base SS method names are PascalCase or snake_case -->
         <exclude name="PSR1.Methods.CamelCapsMethodName.NotCamelCaps"/>
@@ -69,12 +74,14 @@
         <exclude name="SlevomatCodingStandard.Namespaces.FullyQualifiedGlobalFunctions.NonFullyQualified"/>
         <!-- We don't control the order of declaration based on access level -->
         <exclude name="SlevomatCodingStandard.Classes.ClassStructure"/>
-        <!-- Allow our exceptions to have the word "Exception" in them -->
-        <exclude name="SlevomatCodingStandard.Classes.SuperfluousExceptionNaming.SuperfluousSuffix"/>
         <!-- Allow short ternary operator -->
         <exclude name="SlevomatCodingStandard.ControlStructures.DisallowShortTernaryOperator.DisallowedShortTernaryOperator"/>
         <!-- You are not making me go \PHP_EOL -->
         <exclude name="SlevomatCodingStandard.Namespaces.FullyQualifiedGlobalConstants.NonFullyQualified"/>
+
+        <exclude name="SlevomatCodingStandard.Classes.RequireAbstractOrFinal.ClassNeitherAbstractNorFinal"/>
+        <exclude name="SlevomatCodingStandard.Functions.DisallowTrailingCommaInCall.DisallowedTrailingComma"/>
+        <exclude name="SlevomatCodingStandard.Functions.DisallowArrowFunction.DisallowedArrowFunction"/>
     </rule>
 
     <rule ref="SlevomatCodingStandard.Namespaces.UnusedUses">
