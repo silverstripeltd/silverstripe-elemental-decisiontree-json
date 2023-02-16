@@ -11,7 +11,7 @@ tree data as JSON format for use in custom frontend implementation.
 ## Installation
 
 ```
-composer require silverstripe/silverstripe-elemental-decisiontree-output
+composer require silverstripeltd/silverstripe-elemental-decisiontree-json
 ```
 
 ## License
