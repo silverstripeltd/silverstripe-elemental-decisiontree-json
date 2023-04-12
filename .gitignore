@@ -1,5 +1,9 @@
 node_modules
 /vendor/
 .DS_Store
+.idea/
 resources/
-
+composer.lock
+.phpunit.result.cache
+public/
+app/
