@@ -38,12 +38,12 @@ class DataExtension extends Extension
     protected function getStepData(): array
     {
         return [
-            'title' => $this->getOwner()->Title,
-            'isQuestion' => $this->getOwner()->Type === 'Question',
+            'answers' => $this->getOwner()->Answers()->column('ID'),
             'content' => ShortcodeParser::get()->parse($this->getOwner()->Content),
             'hideTitle' => (bool)$this->getOwner()->HideTitle,
-            'answers' => $this->getOwner()->Answers()->column('ID'),
             'isFirst' => $this->getOwner()->belongsToElement(),
+            'isQuestion' => $this->getOwner()->Type === 'Question',
+            'title' => $this->getOwner()->Title,
         ];
     }
 
@@ -53,8 +53,8 @@ class DataExtension extends Extension
     protected function getAnswerData(): array
     {
         return [
-            'title' => $this->getOwner()->Title,
             'goTo' => $this->getOwner()->ResultingStepID,
+            'title' => $this->getOwner()->Title,
         ];
     }
 }
