@@ -8,6 +8,11 @@ use SilverStripe\ORM\ArrayList;
 use SilverStripe\ORM\SS_List;
 use SilverStripe\View\ArrayData;
 
+/**
+ * @phpcs:disable SlevomatCodingStandard.Files.FunctionLength.FunctionLength
+ * @phpcs:disable SlevomatCodingStandard.Functions.FunctionLength.FunctionLength
+ * @phpcs:disable SlevomatCodingStandard.Classes.ForbiddenPublicProperty.ForbiddenPublicProperty
+ */
 class DataExtensionTest extends SapphireTest
 {
     public function testStepOutput(): void
@@ -30,34 +35,34 @@ class DataExtensionTest extends SapphireTest
             }
         };
         $step->update([
-            'Title' => 'Step',
-            'Type' => 'Question',
             'Content' => 'Content',
             'HideTitle' => false,
+            'Title' => 'Step',
+            'Type' => 'Question',
         ]);
         $step->answers = ArrayList::create([
             ArrayData::create([
                 'ID' => 1,
-                'Title' => 'Answer 1',
                 'ResultingStepID' => 2,
+                'Title' => 'Answer 1',
             ]),
             ArrayData::create([
                 'ID' => 2,
-                'Title' => 'Answer 2',
                 'ResultingStepID' => 3,
+                'Title' => 'Answer 2',
             ]),
         ]);
 
         $this->assertEquals(
             [
-                'title' => 'Step',
-                'isQuestion' => true,
+                'answers' => [1, 2,],
                 'content' => 'Content',
                 'hideTitle' => false,
-                'answers' => [1, 2,],
                 'isFirst' => true,
+                'isQuestion' => true,
+                'title' => 'Step',
             ],
-            $step->getJsonData()
+            $step->getJsonData(),
         );
     }
 

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ruleset name="SilverStripe">
-    <description>CodeSniffer ruleset for SilverStripe coding conventions.</description>
+<ruleset name="Silverstripe">
+    <description>CodeSniffer ruleset for Silverstripe coding conventions.</description>
 
     <file>src</file>
     <file>tests</file>
@@ -68,7 +68,7 @@
         <exclude name="SlevomatCodingStandard.Functions.RequireArrowFunction.RequiredArrowFunction"/>
         <!-- Do not require trailing comma in function calls until we're sure we only want PHP 7.4+ support -->
         <exclude name="SlevomatCodingStandard.Functions.TrailingCommaInCall.MissingTrailingComma"/>
-        <!-- Do not require fully qualified exceptions namespaces like SilverStripe\ORM\ValidationException -->
+        <!-- Do not require fully qualified exceptions namespaces like Silverstripe\ORM\ValidationException -->
         <exclude name="SlevomatCodingStandard.Namespaces.FullyQualifiedExceptions.NonFullyQualifiedException"/>
         <!-- Do not require function referenced via a fully qualified name -->
         <exclude name="SlevomatCodingStandard.Namespaces.FullyQualifiedGlobalFunctions.NonFullyQualified"/>
@@ -82,6 +82,7 @@
         <exclude name="SlevomatCodingStandard.Classes.RequireAbstractOrFinal.ClassNeitherAbstractNorFinal"/>
         <exclude name="SlevomatCodingStandard.Functions.DisallowTrailingCommaInCall.DisallowedTrailingComma"/>
         <exclude name="SlevomatCodingStandard.Functions.DisallowArrowFunction.DisallowedArrowFunction"/>
+        <exclude name="SlevomatCodingStandard.Exceptions.DisallowNonCapturingCatch.DisallowedNonCapturingCatch"/>
     </rule>
 
     <rule ref="SlevomatCodingStandard.Namespaces.UnusedUses">

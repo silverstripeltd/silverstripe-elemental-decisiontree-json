@@ -26,12 +26,12 @@ class BlockExtension extends Extension
         try {
             return base64_encode(json_encode(array_merge(
                 [
-                    'blockTitle' => $this->getOwner()->Title,
                     'blockIntro' => ShortcodeParser::get()->parse($this->getOwner()->Introduction),
+                    'blockTitle' => $this->getOwner()->Title,
                 ],
-                $this->getTreeData()
+                $this->getTreeData(),
             ), JSON_THROW_ON_ERROR));
-        } catch (JsonException $e) {
+        } catch (JsonException) {
             return '{}';
         }
     }
@@ -44,8 +44,8 @@ class BlockExtension extends Extension
     private function getTreeData(): array
     {
         $this->treeData = [
-            'steps' => [],
             'answers' => [],
+            'steps' => [],
         ];
 
         // start from the top
