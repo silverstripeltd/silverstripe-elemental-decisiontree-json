@@ -12,3 +12,12 @@ DNADesign\SilverStripeElementalDecisionTree\Model\DecisionTreeStep:
 DNADesign\SilverStripeElementalDecisionTree\Model\ElementDecisionTree:
   extensions:
     - Silverstripe\Elemental\DecisionTree\Output\BlockExtension
+
+---
+Name: elemental-decisiontree-output-cache
+---
+SilverStripe\Core\Injector\Injector:
+  Psr\SimpleCache\CacheInterface.decisiontree-output:
+    factory: SilverStripe\Core\Cache\CacheFactory
+    constructor:
+      namespace: "output"
