@@ -5,7 +5,7 @@ module that adds PHP functions to the block to output the entire tree data as JS
 
 ## Requirements
 
-* Silverstripe ^5.0
+* Silverstripe ^6.0
 * [Decision tree](https://github.com/dnadesign/silverstripe-elemental-decisiontree)
 
 ## Installation
