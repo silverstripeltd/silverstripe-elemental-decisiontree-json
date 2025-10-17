@@ -7,7 +7,7 @@ use JsonException;
 use Psr\SimpleCache\CacheInterface;
 use SilverStripe\Core\Extension;
 use SilverStripe\Core\Injector\Injector;
-use SilverStripe\ORM\SS_List;
+use SilverStripe\Model\List\SS_List;
 use SilverStripe\View\Parsers\ShortcodeParser;
 
 /**
