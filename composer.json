@@ -24,19 +24,13 @@
         "php": "^8.3",
         "ext-json": "*",
         "silverstripe/framework": "^6",
-        "dnadesign/silverstripe-elemental-decisiontree": "dev-pulls/cms6-support"
+        "dnadesign/silverstripe-elemental-decisiontree": "^2.3"
     },
     "require-dev": {
         "silverstripe/recipe-testing": "^4",
         "slevomat/coding-standard": "^8.1",
         "php-parallel-lint/php-parallel-lint": "^1.2"
     },
-    "repositories": [
-        {
-            "type": "git",
-            "url": "git@github.com:silverstripeltd/silverstripe-elemental-decisiontree.git"
-        }
-    ],
     "autoload": {
         "psr-4": {
             "Silverstripe\\Elemental\\": "src/",
