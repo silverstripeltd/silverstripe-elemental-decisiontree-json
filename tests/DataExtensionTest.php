@@ -4,9 +4,9 @@ namespace Silverstripe\Elemental\Tests;
 
 use DNADesign\SilverStripeElementalDecisionTree\Model\DecisionTreeStep;
 use SilverStripe\Dev\SapphireTest;
-use SilverStripe\ORM\ArrayList;
-use SilverStripe\ORM\SS_List;
-use SilverStripe\View\ArrayData;
+use SilverStripe\Model\ArrayData;
+use SilverStripe\Model\List\ArrayList;
+use SilverStripe\Model\List\SS_List;
 
 /**
  * @phpcs:disable SlevomatCodingStandard.Files.FunctionLength.FunctionLength
